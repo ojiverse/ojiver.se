@@ -52,8 +52,8 @@ jobs:
         TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         TF_VAR_cloudflare_zone_id: ${{ secrets.CLOUDFLARE_ZONE_ID }}
         TF_VAR_project_id: ${{ secrets.GCP_PROJECT_ID }}
-        TF_VAR_github_org_name: ${{ secrets.GITHUB_ORG_NAME }}
-        TF_VAR_github_repo_name: ${{ secrets.GITHUB_REPO_NAME }}
+        TF_VAR_github_org_name: ${{ secrets.ORG_NAME }}
+        TF_VAR_github_repo_name: ${{ secrets.REPO_NAME }}
 
     - name: Update Pull Request
       uses: actions/github-script@v7
@@ -96,5 +96,5 @@ jobs:
         TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         TF_VAR_cloudflare_zone_id: ${{ secrets.CLOUDFLARE_ZONE_ID }}
         TF_VAR_project_id: ${{ secrets.GCP_PROJECT_ID }}
-        TF_VAR_github_org_name: ${{ secrets.GITHUB_ORG_NAME }}
-        TF_VAR_github_repo_name: ${{ secrets.GITHUB_REPO_NAME }}
+        TF_VAR_github_org_name: ${{ secrets.ORG_NAME }}
+        TF_VAR_github_repo_name: ${{ secrets.REPO_NAME }}
