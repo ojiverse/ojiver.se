@@ -3,7 +3,7 @@ resource "random_id" "default" {
 }
 
 resource "google_storage_bucket" "default" {
-  project = "ojiverse"
+  project  = "ojiverse"
   name     = "ojiverse-domain-tfstate-${random_id.default.hex}"
   location = "US"
 
