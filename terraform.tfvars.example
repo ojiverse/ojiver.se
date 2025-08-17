@@ -1,0 +1,10 @@
+# Cloudflare configuration
+cloudflare_api_token = "your_cloudflare_api_token_here"
+cloudflare_zone_id   = "your_cloudflare_zone_id_here"
+
+# GCP configuration
+project_id = "your_gcp_project_id_here"
+
+# GitHub configuration
+github_org_name  = "your_github_org_name_here"
+github_repo_name = "your_github_repo_name_here"

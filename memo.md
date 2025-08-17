@@ -1,6 +1,6 @@
 # working memo
 
-## setup Google Cloud Storage for Terraform
+## Initial Setup - Google Cloud Storage for Terraform
 
 ref: https://cloud.google.com/docs/terraform/resource-management/store-state
 
@@ -13,9 +13,9 @@ $ gcloud projects create ojiverse
 Project name: `ojiverse`
 Project number: 56226728303
 
-Then, link the billing account on Web console befor enabling services.
+Then, link the billing account on Web console before enabling services.
 
-2. Enable services
+2. Enable services (now managed by Terraform)
 
 ```bash
 $ gcloud services enable storage.googleapis.com
@@ -34,4 +34,23 @@ $ terraform init -migrate-state
 ```
 
 Now your tfstate is managed on Cloud Storage.
+
+## GitHub Actions OIDC Federation Setup
+
+### Files created:
+- `gcp_apis.tf`: Enables required GCP APIs
+- `github_oidc.tf`: Sets up Workload Identity Pool and Service Account
+- `.github/workflows/terraform.yml`: GitHub Actions workflow
+
+### Setup process:
+1. Apply Terraform locally first to create OIDC resources
+2. Get output values for GitHub secrets configuration
+3. Configure repository secrets in GitHub
+4. Test workflow by creating a PR
+
+### Security benefits:
+- No long-lived service account keys
+- Scoped access only to specific GitHub repository
+- Automatic token rotation
+- Audit trail through GCP IAM logs
 
