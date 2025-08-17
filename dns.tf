@@ -31,4 +31,5 @@ resource "cloudflare_record" "txt_google_verification" {
   allow_overwrite = true
   comment         = ""
   tags            = []
+  proxied         = false
 }
