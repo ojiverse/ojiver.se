@@ -12,7 +12,7 @@ resource "cloudflare_record" "cname_api_swarm" {
   proxied = false
   ttl     = 1
   type    = "CNAME"
-  content = "swarm-api-872751579217.us-central1.run.app"
+  content = "ghs.googlehosted.com"
   zone_id = var.cloudflare_zone_id
 }
 
